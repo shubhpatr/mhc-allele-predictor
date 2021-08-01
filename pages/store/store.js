@@ -1,6 +1,6 @@
 import { createContext, useReducer} from 'react';
 
-const initialState = {flag: false};
+const initialState = {flag: false, data: {}};
 
 function Reducer(state,action){
   

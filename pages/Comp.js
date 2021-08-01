@@ -5,18 +5,19 @@ import Introduction from './introduction'
 import Footer from './Footer'
 import Result from './Result'
 import { Context } from "./store/store";
-import {useContext} from 'react'
+import {useContext,useEffect} from 'react'
 
 function Comp() {
     const [state, dispatch] = useContext(Context);
+
     
     return (
         <div>
             
         <Header></Header>
-        {!state.flag && <Introduction></Introduction>}
-        {!state.flag && <Form></Form>}
-        {state.flag && <Result></Result>}
+        {state && !state.flag && <Introduction></Introduction>}
+        {state && !state.flag && <Form></Form>}
+        {state && state.flag && <Result></Result>}
         <Footer></Footer>
         </div>
     )

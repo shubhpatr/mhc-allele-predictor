@@ -12,7 +12,7 @@ function Result() {
         return(
         <div style={{display:"flex",maxWidth:"100%"}}> 
         <p style={{marginLeft:"20px",marginRight:"10px",color:"orange",fontSize:"1vw"}}>{index+1}. {data} </p>
-        {state.data[data].map((value) => (
+        {state && state.data[data].map((value) => (
                                     <div style={{maxWidth:"30%"}} >
                                     
 									<p style={{color:"white",fontSize:"1vw",marginRight:"5px"}}>
@@ -27,7 +27,7 @@ function Result() {
         <div> 
             <h1 className={styles.intro3}>Result</h1>
             <p style={{color:"rgba(214, 182, 121, 0.884)",textAlign:"center"}}>Format:- (Peptide, Score) </p>
-            {Object.keys(state.data).map((value,index) => (
+            {state && Object.keys(state.data).map((value,index) => (
 									<Allele data={value} index={index}/>
 								))}
         
