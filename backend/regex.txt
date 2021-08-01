@@ -1,0 +1,26 @@
+
+\s ----> find all white spaces
+([A-Z]*|$)(:|$) --> find all alphabet characters, put in group 1
+                    find : and put in group 2
+                    replace - {"$1"$2}
+
+(\d\s|$) ---> find all digits with space after
+              add comma to it {$1,}
+
+
+([,]|$)( [A-Z]) ---> find all looking like this {,  C:} and insert ending square bracket
+                     replace with ], $2
+
+
+([:]|$) ---> Insster leading bracket after :
+            replace with $1[
+
+
+([A-Z]|$) --> insert quotes between all characters
+
+
+mhc = ["HLA-A1", "HLA-A2", "HLA-A*0201", "HLA-A*0205", "HLA-A*1101", "HLA-A24", "HLA-A3", "HLA-A*3101", "HLA-A*3302", "HLA-A68.1", "HLA-A20 Cattle", "HLA-A2.1", "HLA-B14", "HLA-B*2702", "HLA-B*2705", "HLA-B*3501", "HLA-B*3701", "HLA-B*3801", "HLA-B*3901", "HLA-B*3902", "HLA-B40", "HLA-B*4403", "HLA-B*5101", "HLA-B*5102", "HLA-B*5103", "HLA-B*5201", "HLA-B*5301", "HLA-B*5401", "HLA-B*51", "HLA-B*5801", "HLA-B60", "HLA-B61", "HLA-B62", "HLA-B7", "HLA-B*0702", "HLA-B8", "HLA-Cw*0301", "HLA-Cw*0401", "HLA-Cw*0602", "HLA-Cw*0702", "H2-Db", "H2-Db revised", "H2-Dd", "H2-Kb", "H2-Kd", "H2-Kk", "H2-Ld"]
+
+
+
+
