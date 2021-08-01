@@ -2,7 +2,7 @@
 
 export default async function handler(req, res) {
   console.log(req.body);
-  let data = await fetch('http://localhost:8000/', {
+  let data = await fetch('https://1csw6k.deta.dev', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

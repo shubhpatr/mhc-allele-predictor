@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "server": "cd backend && python -m uvicorn main:app",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
     "lint": "next lint"
   },
   "dependencies": {
@@ -16,6 +17,7 @@
     "react-icons": "^4.2.0"
   },
   "devDependencies": {
+    "concurrently": "^6.2.0",
     "eslint": "7.31.0",
     "eslint-config-next": "11.0.1"
   }
