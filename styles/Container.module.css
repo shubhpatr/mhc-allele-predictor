@@ -1,5 +1,5 @@
 .container {
-    position: relative;
+    position: inherit;
       background: #161b22;
       /* padding: 100px 165px; */
     height: 100%;
@@ -50,7 +50,7 @@
   }
 
   .tooltip {
-    position: relative;
+    position: inherit;
     display: inline-block;
     margin-left: 20px;
     border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
