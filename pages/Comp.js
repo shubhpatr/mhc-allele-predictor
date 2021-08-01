@@ -14,12 +14,10 @@ function Comp() {
         <div>
             
         <Header></Header>
-        <div>
         {!state.flag && <Introduction></Introduction>}
         {!state.flag && <Form></Form>}
         {state.flag && <Result></Result>}
         <Footer></Footer>
-        </div>
         </div>
     )
 }

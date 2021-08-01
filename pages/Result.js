@@ -1,18 +1,13 @@
 import React from 'react'
-import Header from './header'
-import Footer from './Footer'
 import { Context } from "./store/store";
-import {useContext,useState} from 'react'
-import gen from './data';
+import {useContext} from 'react';
 import styles from '../styles/Home.module.css';
 
 
 
 function Result() {
     const [state, dispatch] = useContext(Context);
-    const [genome, setGenome] = useState(gen);
 
-    console.log(state);
     function Allele({data,index}) {
         return(
         <div style={{display:"flex",maxWidth:"100%"}}> 
@@ -40,4 +35,4 @@ function Result() {
     )
 }
 
-export default Result
+export default Result;
