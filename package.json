@@ -5,8 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "server": "cd backend && python -m uvicorn main:app",
-    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
